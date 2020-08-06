@@ -54,6 +54,17 @@ class PostController extends Controller
         }
     }
 
+    public function list()
+    {
+        try {
+            $Posts = auth()->user()->posts;
+            return view('post.list', compact('Posts'));
+            dd($Posts);
+        } catch (\Throwable $th) {
+            return redirect()->route('home')->with('error','Se ha producido un error');
+        }
+    }
+
     /**
      * Display the specified resource.
      *
