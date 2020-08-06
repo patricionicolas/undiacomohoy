@@ -17,7 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/solid.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/light.css') }}">
 </head>
 <body>
     <div id="app">
