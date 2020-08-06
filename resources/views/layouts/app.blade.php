@@ -18,9 +18,6 @@
 
     <!-- Styles -->
     <link type="text/css" href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/fontawesome.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/solid.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/light.css') }}">
 </head>
 <body>
     <div id="app">
