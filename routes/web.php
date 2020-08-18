@@ -19,3 +19,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/createpost', 'PostController@create')->name('createpost');
 Route::post('/storepost', 'PostController@store')->name('store');
 Route::get('/list', 'PostController@list')->name('list');
+Route::get('/destroy/{id}', 'PostController@destroy')->name('destroy');

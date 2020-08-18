@@ -10,7 +10,7 @@
                 <div class="card">
                     <div class="card-header">Todos tus registros</div>
 
-                    <div class="card-body">
+                    <div class="card-body py-0 px-1">
                         @if (count($Posts) > 0) 
                             <table class="table table-striped">
                                 <thead>
@@ -27,13 +27,18 @@
                                 <tbody>
                                 @foreach ($Posts as $p)
                                     <tr>
-                                        <th scope="row">{{$p->id}}          </th>
-                                        <td>            {{$p->fecha}}       </td>
-                                        <td>            {{$p->titulo}}      </td>
-                                        <td>            {{$p->descripcion}} </td>
-                                        <td>            {{$p->url}}         </td>
-                                        <td>            {{$p->publico}}     </td>
-                                        <td>            acciones            </td>
+                                        <th scope="row">{{$p->id}}                                  </th>
+                                        <td>            {{date('d-m-Y', strtotime($p->fecha)) }}    </td>
+                                        <td>            {{$p->titulo}}                              </td>
+                                        <td>            {{$p->descripcion}}                         </td>
+                                        <td>            {{$p->url}}                                 </td>
+                                        <td>            {{$p->publico}}                             </td>
+                                        <td>            
+                                            <a 	class="btn btn-sm btn-outline-danger" 
+													href="{{ route('destroy', ['id' => $p->id]) }}" >
+                                                Eliminar    
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                                 </tbody>

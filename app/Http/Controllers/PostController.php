@@ -107,6 +107,11 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try {
+            Post::findOrFail($id)->delete();
+            return redirect()->route('home')->with('info','Registro eliminado con éxito.');
+        } catch (\Throwable $th) {
+            return redirect()->route('home')->with('error','Se ha producido un error');
+        }
     }
 }
